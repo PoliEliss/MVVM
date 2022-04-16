@@ -12,7 +12,7 @@ import com.rorono.mvvm.utilits.APP_ACTIVITY
 
 class MainActivity : AppCompatActivity() {
     lateinit var mToolbar: androidx.appcompat.widget.Toolbar
-
+    lateinit var  navController:NavController
     lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,10 +22,11 @@ class MainActivity : AppCompatActivity() {
         APP_ACTIVITY = this
         mToolbar = binding.toolbar
         setSupportActionBar(mToolbar)
+
         title = getString(R.string.title)
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
-        val navController = navHostFragment.navController
+         navController = navHostFragment.navController
 
     }
 
